@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Added CSS reference via an external file  -->
+  <link rel="stylesheet" href="bootstrap.min.css"> 
+  
+</head>
+
+<body>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-3">ISBN Search</h1>
+      <p class="lead">On-demand Oreilly ISBN Search.</p>
+    </div>
+  </div>
+  
+<form class="form-inline">
+    <label class="sr-only" for="inlineFormInputKeyword">Name</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputKeyword" placeholder="Python">
+  
+    <label class="sr-only" for="inlineFormInputPages">Username</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <input type="text" class="form-control" id="inlineFormInputPages" placeholder="Pages (e.g. 1 or 10)">
+    </div>
+
+
+
+    <script src="./functions.js" type="text/javascript">
+    </script>     
+
+    <button onclick="fetch_data()" type="button" class="btn btn-primary mb-2">Search</button>
+
+    <button style="margin-left: 2.5em; "onclick="fetch_sample_data()" type="button" class="btn btn-primary mb-2">Sample GET</button>
+    <div  role="status">
+        <span class="spinner-border m-5" id="awaiting" class="sr-only" style="visibility:hidden;"></span>
+      </div>
+   
+  </form>
+
+  <div id="responseDiv" class="form-group">
+    <label for="exampleTextarea">Output JSON</label>
+    <textarea class="form-control" id="responseData" rows="12"></textarea>
+  </div>
+  
+</body>
+</html> 
